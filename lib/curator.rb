@@ -42,10 +42,11 @@ class Curator
       photograph.artist_id
     end
 
-    # artist_ids = @artists.map do |artist|
-    #   artist.id
-    # end
-    # require 'pry'; binding.pry
+    artist_ids = @artists.map do |artist|
+      artist.id
+    end
+
+    require 'pry'; binding.pry
     # @artists.find_all do |artist|
     #   (artist.id == photograph.artist_id) > 1
     # end
@@ -53,7 +54,8 @@ class Curator
 
   def photographs_taken_by_artist_from(country)
     # find all photographs whose artist id matches the id of
-    # the artist whose hash contains the string
+    # the artist whose hash of attributes contains the string
+    
     artist_countries = @artists.map do |artist|
       artist.country
     end
